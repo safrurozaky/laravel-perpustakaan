@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard'); //untuk buat index kita butuh (index-view), (buat controller untuk return view), dan tambahkan controller di routes (web)
